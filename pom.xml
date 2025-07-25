@@ -11,7 +11,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>io.joshuasalcedo</groupId>
-    <artifactId>fx</artifactId>
+    <artifactId>desktop-application</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <description>AtlantaFX starter</description>
     <url>https://github.com/mkpaz/atlantafx-starter</url>
@@ -23,7 +23,8 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
-        <java.version>21</java.version>
+        <java.version>24</java.version>
+
         <javafx.version>22</javafx.version>
 
         <app.name>AtlantaFX Starter</app.name>
@@ -35,7 +36,6 @@
         <lib.ikonli.version>12.3.1</lib.ikonli.version>
         <lib.jspecify.version>1.0.0</lib.jspecify.version>
         <test.assertj.version>3.26.3</test.assertj.version>
-        <test.junit.version>5.10.3</test.junit.version>
     </properties>
 
     <dependencies>
@@ -73,8 +73,12 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>${test.junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.19.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -92,8 +96,12 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>${test.junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
     <profiles>
